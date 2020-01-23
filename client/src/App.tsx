@@ -14,7 +14,7 @@ import {HttpLink} from "apollo-link-http";
 import {ApolloLink} from "apollo-link";
 import {StateProvider} from "./context/store";
 
-const httpLink = new HttpLink({ uri: 'http://localhost:4000',credentials: 'include' });
+const httpLink = new HttpLink({ uri: 'http://localhost:4000/graphql',credentials:"include" });
 
 const authLink = new ApolloLink((operation, forward) => {  
   const token = localStorage.getItem('jwt_token');

@@ -1,0 +1,14 @@
+
+copy folder recursively to container
+docker cp -a /home/diego/webstatic exciting_nobel:/home
+docker commit keen_darwin cupidme2:latest
+
+docker run --name diegus -d -p 80:80 -p 4000:4000 cupidme2:latest
+
+remve image by tag
+docker rmi cupidme2:latest
+
+
+docker build -t nginx_cupid .
+
+
